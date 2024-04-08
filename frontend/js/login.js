@@ -75,11 +75,7 @@ function login() {
       password: password,
     };
 
-    apiCall(
-      "post",
-      "https://e-commerce-six-nu-87.vercel.app/api/users/login",
-      data
-    )
+    apiCall("post", "http://localhost:8000/api/users/login", data)
       .then((message) => {
         // console.log(message);
         loggedIn = true;
