@@ -27,7 +27,7 @@ function personalInfo() {
       if (message.role == "admin") {
         symbol.innerHTML = `
         <span class="material-symbols-outlined" id="personInfo">
-        <a href="/admin-panel.html"> Home </a>
+        <a href="./admin-panel.html"> Home </a>
       </span>
       <h2>Check Out</h2>
       <span class="material-symbols-outlined">
@@ -40,7 +40,7 @@ function personalInfo() {
       if (message.role == "user") {
         symbol.innerHTML = `
         <span class="material-symbols-outlined" id="personInfo">
-          <a href="/home.html"> Home </a>
+          <a href="./home.html"> Home </a>
         </span>
         <h2>Check Out</h2>
         <span class="material-symbols-outlined">
@@ -63,7 +63,7 @@ function personalInfo() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1 class="error">Please <a href="http://127.0.0.1:5500/frontend/index.html">Login</a> To access this page</h1>`;
+        <h1 class="error">Please <a href="./index.html">Login</a> To access this page</h1>`;
     });
 }
 
@@ -73,5 +73,5 @@ async function logout() {
   let logout = document.getElementById("logout");
 
   await apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/logout");
-  window.location.href = "/index.html";
+  window.location.href = "./index.html";
 }

@@ -37,7 +37,7 @@ async function viewCart() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1>Please <a href="/index.html">Login</a> To access this page</h1> `;
+        <h1>Please <a href="./index.html">Login</a> To access this page</h1> `;
     });
 
   await apiCall(
@@ -53,7 +53,7 @@ async function viewCart() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1>Please <a href="/index.html">Login</a> To access this page</h1> `;
+        <h1>Please <a href="./index.html">Login</a> To access this page</h1> `;
     });
 
   if (selectedId == 0) {
@@ -113,7 +113,7 @@ function logout() {
       "get",
       "https://e-commerce-hesr.onrender.com/api/users/logout"
     );
-    window.location.href = "/index.html";
+    window.location.href = "./index.html";
   });
 }
 
