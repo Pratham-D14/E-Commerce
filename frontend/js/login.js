@@ -75,7 +75,11 @@ function login() {
       password: password,
     };
 
-    apiCall("post", "http://localhost:8000/api/users/login", data)
+    apiCall(
+      "post",
+      "https://e-commerce-peach-one-22.vercel.app/api/users/login",
+      data
+    )
       .then((message) => {
         // console.log(message);
         loggedIn = true;
@@ -125,7 +129,11 @@ function registration() {
       username: username,
       password: password,
     };
-    apiCall("post", "http://localhost:8000/api/users/register", data)
+    apiCall(
+      "post",
+      "https://e-commerce-peach-one-22.vercel.app/api/users/register",
+      data
+    )
       .then((message) => {
         console.log(message);
 
