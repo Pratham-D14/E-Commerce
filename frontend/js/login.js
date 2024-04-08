@@ -77,7 +77,7 @@ function login() {
 
     apiCall(
       "post",
-      "https://e-commerce-peach-one-22.vercel.app/api/users/login",
+      "https://e-commerce-hesr.onrender.com/api/users/login",
       data
     )
       .then((message) => {
@@ -87,12 +87,12 @@ function login() {
         console.log(role);
         if (role == "user") {
           window.location.href =
-            "https://e-commerce-peach-one-22.vercel.app/home.html";
+            "https://e-commerce-hesr.onrender.com/home.html";
         }
 
         if (role == "admin") {
           window.location.href =
-            "https://e-commerce-peach-one-22.vercel.app/admin-panel.html";
+            "https://e-commerce-hesr.onrender.com/admin-panel.html";
         }
       })
       .catch((error) => {
@@ -131,7 +131,7 @@ function registration() {
     };
     apiCall(
       "post",
-      "https://e-commerce-peach-one-22.vercel.app/api/users/register",
+      "https://e-commerce-hesr.onrender.com/api/users/register",
       data
     )
       .then((message) => {

@@ -22,12 +22,12 @@ function apiCall(method, url, data) {
 function personalInfo() {
   let output = document.getElementById("output");
   let symbol = document.getElementById("div-symbol");
-  apiCall("get", "http://localhost:8000/api/users/userInfo")
+  apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/userInfo")
     .then((message) => {
       if (message.role == "admin") {
         symbol.innerHTML = `
         <span class="material-symbols-outlined" id="personInfo">
-        <a href="http://127.0.0.1:5500/frontend/admin-panel.html"> Home </a>
+        <a href="/admin-panel.html"> Home </a>
       </span>
       <h2>Check Out</h2>
       <span class="material-symbols-outlined">
@@ -40,11 +40,11 @@ function personalInfo() {
       if (message.role == "user") {
         symbol.innerHTML = `
         <span class="material-symbols-outlined" id="personInfo">
-          <a href="http://127.0.0.1:5500/frontend/home.html"> Home </a>
+          <a href="/home.html"> Home </a>
         </span>
         <h2>Check Out</h2>
         <span class="material-symbols-outlined">
-        <a href="http://127.0.0.1:5500/frontend/view-cart.html"
+        <a href="/view-cart.html"
           >shopping_cart</a
         >
         <a id="logout" onclick="logout()">logout</a>
@@ -72,6 +72,6 @@ personalInfo();
 async function logout() {
   let logout = document.getElementById("logout");
 
-  await apiCall("get", "http://localhost:8000/api/users/logout");
-  window.location.href = "http://127.0.0.1:5500/frontend/index.html";
+  await apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/logout");
+  window.location.href = "/index.html";
 }

@@ -22,7 +22,7 @@ function apiCall(method, url, data) {
 function homepage() {
   let output = document.getElementById("output");
   let cartNumber = document.getElementById("cart_number");
-  apiCall("get", "http://localhost:8000/api/product/data")
+  apiCall("get", "https://e-commerce-hesr.onrender.com/api/product/data")
     .then((message) => {
       message.forEach((e) => {
         output.innerHTML += `
@@ -38,7 +38,7 @@ function homepage() {
       `;
       });
 
-      apiCall("get", "http://localhost:8000/api/users/viewCart")
+      apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/viewCart")
         .then((message) => {
           let totalQty = 0;
           message.forEach((e) => {
@@ -68,40 +68,45 @@ function addItem(id) {
   let cartNumber = document.getElementById("cart_number");
 
   let data = { productId: id };
-  apiCall("post", "http://localhost:8000/api/users/cartId", data).then(
-    (message) => {
-      // console.log(message);
+  apiCall(
+    "post",
+    "https://e-commerce-hesr.onrender.com/api/users/cartId",
+    data
+  ).then((message) => {
+    // console.log(message);
 
-      addBtn.innerText = "Item Added Successfully";
-      (addBtn.style.backgroundColor = "white"), (addBtn.style.color = "green");
-      setTimeout(function () {
-        addBtn.innerText = "Add";
-        (addBtn.style.backgroundColor = "#03112e"),
-          (addBtn.style.color = "white");
-      }, 2000);
+    addBtn.innerText = "Item Added Successfully";
+    (addBtn.style.backgroundColor = "white"), (addBtn.style.color = "green");
+    setTimeout(function () {
+      addBtn.innerText = "Add";
+      (addBtn.style.backgroundColor = "#03112e"),
+        (addBtn.style.color = "white");
+    }, 2000);
 
-      apiCall("get", "http://localhost:8000/api/users/viewCart")
-        .then((message) => {
-          let totalQty = 0;
-          message.forEach((e) => {
-            totalQty += e.product.Qty;
-          });
-          // console.log(totalQty);
-          cartNumber.innerHTML = `${totalQty}`;
-        })
-        .catch((err) => {
-          console.log(err);
+    apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/viewCart")
+      .then((message) => {
+        let totalQty = 0;
+        message.forEach((e) => {
+          totalQty += e.product.Qty;
         });
-    }
-  );
+        // console.log(totalQty);
+        cartNumber.innerHTML = `${totalQty}`;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 }
 
 function logout() {
   let logout = document.getElementById("logout");
 
   logout.addEventListener("click", async function () {
-    await apiCall("get", "http://localhost:8000/api/users/logout");
-    window.location.href = "http://127.0.0.1:5500/frontend/index.html";
+    await apiCall(
+      "get",
+      "https://e-commerce-hesr.onrender.com/api/users/logout"
+    );
+    window.location.href = "/index.html";
   });
 }
 

@@ -23,7 +23,10 @@ async function viewCart() {
   let allData = [];
   let selectedId = [];
   let output = document.getElementById("output");
-  await apiCall("get", "http://localhost:8000/api/users/viewCart")
+  await apiCall(
+    "get",
+    "https://e-commerce-hesr.onrender.com/api/users/viewCart"
+  )
     .then((message) => {
       message.forEach((e) => {
         selectedId.push(e);
@@ -34,10 +37,14 @@ async function viewCart() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1>Please <a href="http://127.0.0.1:5500/frontend/index.html">Login</a> To access this page</h1> `;
+        <h1>Please <a href="/index.html">Login</a> To access this page</h1> `;
     });
 
-  await apiCall("get", "http://localhost:8000/api/product/data", {})
+  await apiCall(
+    "get",
+    "https://e-commerce-hesr.onrender.com/api/product/data",
+    {}
+  )
     .then((message) => {
       message.forEach((e) => {
         allData.push(e);
@@ -46,7 +53,7 @@ async function viewCart() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1>Please <a href="http://127.0.0.1:5500/frontend/index.html">Login</a> To access this page</h1> `;
+        <h1>Please <a href="/index.html">Login</a> To access this page</h1> `;
     });
 
   if (selectedId == 0) {
@@ -90,7 +97,11 @@ viewCart();
 async function deleteFunc(id) {
   let data = { productId: id };
   // console.log(data);
-  await apiCall("post", "http://localhost:8000/api/users/deleteQty", data);
+  await apiCall(
+    "post",
+    "https://e-commerce-hesr.onrender.com/api/users/deleteQty",
+    data
+  );
   window.location.reload();
 }
 
@@ -98,8 +109,11 @@ function logout() {
   let logout = document.getElementById("logout");
 
   logout.addEventListener("click", async function () {
-    await apiCall("get", "http://localhost:8000/api/users/logout");
-    window.location.href = "http://127.0.0.1:5500/frontend/index.html";
+    await apiCall(
+      "get",
+      "https://e-commerce-hesr.onrender.com/api/users/logout"
+    );
+    window.location.href = "/index.html";
   });
 }
 

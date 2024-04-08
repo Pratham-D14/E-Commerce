@@ -21,7 +21,7 @@ function apiCall(method, url, data) {
 
 function adminPanel() {
   let output = document.getElementById("output");
-  apiCall("get", "http://localhost:8000/api/product/data")
+  apiCall("get", "https://e-commerce-hesr.onrender.com/api/product/data")
     .then((message) => {
       message.forEach((e) => {
         output.innerHTML += `
@@ -57,7 +57,11 @@ adminPanel();
 // Add Item
 function addItem(id) {
   let data = { productId: id };
-  apiCall("post", "http://localhost:8000/api/users/cartId", data);
+  apiCall(
+    "post",
+    "https://e-commerce-hesr.onrender.com/api/users/cartId",
+    data
+  );
 }
 
 // Delete Item
@@ -66,7 +70,7 @@ async function deleteItem(id) {
   let data = { productId: id };
   await apiCall(
     "post",
-    "http://localhost:8000/api/product/deleteProduct",
+    "https://e-commerce-hesr.onrender.com/api/product/deleteProduct",
     data
   );
   window.location.reload();
@@ -111,15 +115,19 @@ async function saveChanges(id) {
     type: type,
   };
 
-  await apiCall("post", "http://localhost:8000/api/product/editProduct", data);
+  await apiCall(
+    "post",
+    "https://e-commerce-hesr.onrender.com/api/product/editProduct",
+    data
+  );
   window.location.reload();
 }
 
 async function logout() {
   // let logout = document.getElementById("logout");
 
-  await apiCall("get", "http://localhost:8000/api/users/logout");
-  window.location.href = "http://127.0.0.1:5500/frontend/index.html";
+  await apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/logout");
+  window.location.href = "/index.html";
 }
 
 function addProduct() {
@@ -154,7 +162,11 @@ function addProduct() {
         imageUrl: imageUrl,
       };
 
-      apiCall("post", "http://localhost:8000/api/users/addProduct", Data);
+      apiCall(
+        "post",
+        "https://e-commerce-hesr.onrender.com/api/users/addProduct",
+        Data
+      );
     }
   });
 }
