@@ -27,5 +27,5 @@ Technologies Used
 
 Access to Admin Panel
 If you wish to access the admin panel, please contact me via GitHub or email to obtain the credentials.
-GitHub: Pratham-D14
-Email: pratham14104@gmail.com
+1. GitHub: Pratham-D14
+2. Email: pratham14104@gmail.com
