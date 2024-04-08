@@ -82,12 +82,13 @@ function login() {
         let role = message.loggedInUserRole;
         console.log(role);
         if (role == "user") {
-          window.location.href = "http://127.0.0.1:5500/frontend/home.html";
+          window.location.href =
+            "https://e-commerce-peach-one-22.vercel.app/home.html";
         }
 
         if (role == "admin") {
           window.location.href =
-            "http://127.0.0.1:5500/frontend/admin-panel.html";
+            "https://e-commerce-peach-one-22.vercel.app/admin-panel.html";
         }
       })
       .catch((error) => {
