@@ -44,7 +44,7 @@ function personalInfo() {
         </span>
         <h2>Check Out</h2>
         <span class="material-symbols-outlined">
-        <a href="/view-cart.html"
+        <a href="./view-cart.html"
           >shopping_cart</a
         >
         <a id="logout" onclick="logout()">logout</a>
