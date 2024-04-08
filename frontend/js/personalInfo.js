@@ -63,7 +63,7 @@ function personalInfo() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1 class="error">Please <a href="http://127.0.0.1:5500/frontend/login.html">Login</a> To access this page</h1>`;
+        <h1 class="error">Please <a href="http://127.0.0.1:5500/frontend/index.html">Login</a> To access this page</h1>`;
     });
 }
 
@@ -73,5 +73,5 @@ async function logout() {
   let logout = document.getElementById("logout");
 
   await apiCall("get", "http://localhost:8000/api/users/logout");
-  window.location.href = "http://127.0.0.1:5500/frontend/login.html";
+  window.location.href = "http://127.0.0.1:5500/frontend/index.html";
 }
