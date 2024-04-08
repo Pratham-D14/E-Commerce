@@ -86,13 +86,11 @@ function login() {
         let role = message.loggedInUserRole;
         console.log(role);
         if (role == "user") {
-          window.location.href =
-            "https://e-commerce-hesr.onrender.com/home.html";
+          window.location.href = "./home.html";
         }
 
         if (role == "admin") {
-          window.location.href =
-            "https://e-commerce-hesr.onrender.com/admin-panel.html";
+          window.location.href = "./admin-panel.html";
         }
       })
       .catch((error) => {
