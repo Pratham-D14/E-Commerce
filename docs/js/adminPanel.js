@@ -48,7 +48,7 @@ function adminPanel() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-        <h1 class="error">Please <a href="http://127.0.0.1:5500/frontend/index.html">Login</a> To access this page</h1>`;
+        <h1 class="error">Please <a href="./index.html">Login</a> To access this page</h1>`;
     });
 }
 
