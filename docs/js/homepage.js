@@ -55,7 +55,7 @@ function homepage() {
     .catch((err) => {
       console.log(err);
       output.innerHTML = `
-      <h1>Please <a href="./index.html">Login</a> To access this page</h1>`;
+      <h1 id="h1">Please <a href="./index.html">Login</a> To access this page</h1>`;
     });
 }
 
