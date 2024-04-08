@@ -1,14 +1,14 @@
 <a href="https://pratham-d14.github.io/E-Commerce/">E-Commerce</a> 
-Description
+<b>Description</b>
 This project is an E-commerce website developed using HTML, CSS, JavaScript, Node.js, and MongoDB. It allows users to register, browse products, add them to their cart, and make purchases. The system has two types of users: regular users and administrators.
 
-User Roles
+<b>User Roles</b>
 1. User: Browse products, add products to cart, make purchases.
 2. Admin: Manage product database, including adding, removing, or updating products.
  
 
 
-Installation
+<b>Installation</b>
 To run this project locally, follow these steps:  
 1. Clone the repository: git clone https://github.com/Pratham-D14/E-Commerce.git
 2. Navigate to the project directory: E-Commerce
@@ -16,16 +16,16 @@ To run this project locally, follow these steps:
 4. Set up the MongoDB database and create a .env file in the root directory with the following environment variables: DB_CONNECTION=your_mongodb_connection_stringJWT_SECRET=your_jwt_secret_key
 
 
-Usage
+<b>Usage</b>
 1. Start the server: npm start
 
-Technologies Used
+<b>Technologies Used</b>
 1. HTML, CSS, and JavaScript are used in Frontend Development
 2. Node.js is used for Backend and Creating API's
 3. MongoDB used to store users and product data in Database
 4. JSON Web Token (JWT): Used for authentication and generating access tokens for user sessions.
 
-Access to Admin Panel
+<b>Access to Admin Panel</b> <br>
 If you wish to access the admin panel, please contact me via GitHub or email to obtain the credentials.
 1. GitHub: Pratham-D14
 2. Email: pratham14104@gmail.com
