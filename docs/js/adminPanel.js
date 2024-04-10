@@ -127,7 +127,7 @@ async function logout() {
   // let logout = document.getElementById("logout");
 
   await apiCall("get", "https://e-commerce-hesr.onrender.com/api/users/logout");
-  window.location.href = "/index.html";
+  window.location.href = "./index.html";
 }
 
 function addProduct() {
