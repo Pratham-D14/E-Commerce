@@ -26,7 +26,7 @@ To run this project locally, follow these steps:
 4. JSON Web Token (JWT): Used for authentication and generating access tokens for user sessions.
 
 <b>Access to Website</b> <br>
- 1.Users Panel: Simply register and login with username and passsword
+ 1.Users Panel: Simply register and login with username and passsword <br>
  2. If you wish to access the admin panel, please contact me via GitHub or email to obtain the credentials.
  i. GitHub: Pratham-D14
  ii. Email: pratham14104@gmail.com
