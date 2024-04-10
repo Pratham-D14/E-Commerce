@@ -8,7 +8,7 @@ This project is an E-commerce website developed using HTML, CSS, JavaScript, Nod
  
 
 
-<b>Installation:</b><br>
+<b>Installation</b><br>
 To run this project locally, follow these steps:  
 1. Clone the repository: git clone https://github.com/Pratham-D14/E-Commerce.git
 2. Navigate to the project directory: E-Commerce
