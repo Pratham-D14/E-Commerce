@@ -27,6 +27,6 @@ To run this project locally, follow these steps:
 
 <b>Access to Website</b> <br>
 1. Users Panel: Simply register and login with username and passsword
-2. If you wish to access the admin panel, please contact me via GitHub or email to obtain the credentials.
+2. If you wish to access the admin panel, please contact me via GitHub or email to obtain the credentials. <br>
  i. GitHub: Pratham-D14
  ii. Email: pratham14104@gmail.com
