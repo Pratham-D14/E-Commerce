@@ -28,36 +28,46 @@
     <div id="addProduct__div" class="unactive">
       <form action="">
         <div class="form">
-          <label>Name: </label>
+          <label for="name">Name: </label>
           <input
             id="productName"
             type="text"
+            name="name"
             placeholder="Something"
             required
           />
 
-          <label>Description: </label>
+          <label for="description">Description: </label>
           <input
+            name="description"
             id="productDescription"
             type="text"
             placeholder="product description"
             required
           />
 
-          <label>Price: </label>
-          <input id="productPrice" type="text" placeholder="$999" required />
+          <label for="price">Price: </label>
+          <input
+            id="productPrice"
+            name="price"
+            type="text"
+            placeholder="$999"
+            required
+          />
 
-          <label>Type: </label>
+          <label for="type">Type: </label>
           <input
             id="productType"
+            name="type"
             type="text"
             placeholder="Electronics"
             required
           />
 
-          <label>Image URL: </label>
+          <label for="image">Image URL: </label>
           <input
             id="imageUrl"
+            name="type"
             type="text"
             placeholder="https://.dummy.jpg"
             required
@@ -66,10 +76,10 @@
 
         <div class="submitbtn">
           <input
-            onclick="window.location.reload()"
             type="submit"
             value="Cancel"
             id="submit-btn"
+            onclick="window.location.reload()"
           />
           <input type="submit" value="Submit" id="submit-btn" />
         </div>
