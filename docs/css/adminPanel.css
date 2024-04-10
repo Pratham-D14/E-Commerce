@@ -111,7 +111,8 @@ body {
   gap: 10px;
 }
 
-#submit-btn {
+#submit-btn,
+#CancelBtn {
   padding: 12px !important;
   background-color: #1d267d;
   color: #f2f2f2;
