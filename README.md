@@ -1,4 +1,4 @@
-<a href="https://pratham-d14.github.io/E-Commerce/">E-Commerce</a> 
+<a href="https://pratham-d14.github.io/E-Commerce/">E-Commerce</a><br> 
 <b>Description</b>
 This project is an E-commerce website developed using HTML, CSS, JavaScript, Node.js, and MongoDB. It allows users to register, browse products, add them to their cart, and make purchases. The system has two types of users: regular users and administrators.
 
@@ -8,7 +8,7 @@ This project is an E-commerce website developed using HTML, CSS, JavaScript, Nod
  
 
 
-<b>Installation</b>
+<b>Installation:</b><br>
 To run this project locally, follow these steps:  
 1. Clone the repository: git clone https://github.com/Pratham-D14/E-Commerce.git
 2. Navigate to the project directory: E-Commerce
