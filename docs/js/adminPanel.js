@@ -140,6 +140,7 @@ function addProduct() {
   });
 
   submitBtn.addEventListener("click", function (e) {
+    e.preventDefault();
     let productName = document.getElementById("productName").value;
     let productDescription =
       document.getElementById("productDescription").value;
@@ -166,7 +167,13 @@ function addProduct() {
         "post",
         "https://e-commerce-hesr.onrender.com/api/users/addProduct",
         Data
-      );
+      )
+        .then((res) => {
+          location.reload();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   });
 }
