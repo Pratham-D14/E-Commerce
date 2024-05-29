@@ -30,3 +30,4 @@ To run this project locally, follow these steps:
 2. If you wish to access the admin panel, please contact me via GitHub or email to obtain the credentials. <br>
  i. GitHub: Pratham-D14 <br>
  ii. Email: pratham14104@gmail.com
+# E-Commerce
